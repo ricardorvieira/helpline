@@ -1,0 +1,191 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "HelplineOS",
+      "persona": "The Calm Operator",
+      "vibe": "Minimal, Efficient, Human-Centric, Reliable",
+      "principles": [
+        "Clarity over Decoration: Data must be readable at a glance.",
+        "Calm in Chaos: Use neutral tones to reduce cognitive load.",
+        "Speed is a Feature: Interactions must be instant and keyboard-friendly.",
+        "Human Touch: Use subtle warmth in colors to avoid a sterile 'hospital' feel."
+      ]
+    },
+    "typography": {
+      "font_family": {
+        "headings": "Manrope, sans-serif",
+        "body": "Inter, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-4xl font-bold tracking-tight",
+        "h2": "text-3xl font-semibold tracking-tight",
+        "h3": "text-2xl font-semibold tracking-tight",
+        "body_large": "text-lg leading-relaxed",
+        "body_default": "text-base leading-normal",
+        "caption": "text-sm text-muted-foreground"
+      },
+      "rules": [
+        "Use 'Manrope' for all headings to give a modern, geometric feel.",
+        "Use 'Inter' for all data tables, inputs, and body text for maximum legibility.",
+        "Headings must have tight tracking ('tracking-tight').",
+        "Labels must be uppercase, small, and wide-spaced ('text-xs uppercase tracking-wider')."
+      ]
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "name": "Deep Slate",
+          "value": "hsl(220, 15%, 10%)",
+          "usage": "Primary buttons, active states, key text"
+        },
+        "secondary": {
+          "name": "Soft Clay",
+          "value": "hsl(20, 10%, 90%)",
+          "usage": "Secondary backgrounds, muted elements"
+        },
+        "accent": {
+          "name": "Burnt Sienna",
+          "value": "hsl(18, 80%, 55%)",
+          "usage": "Call-to-actions, critical alerts, focus rings"
+        },
+        "background": {
+          "light": "hsl(210, 20%, 98%)",
+          "dark": "hsl(220, 15%, 10%)"
+        },
+        "surface": {
+          "light": "hsl(0, 0%, 100%)",
+          "dark": "hsl(220, 15%, 14%)"
+        },
+        "status": {
+          "success": "hsl(150, 60%, 45%)",
+          "warning": "hsl(40, 90%, 60%)",
+          "error": "hsl(0, 70%, 60%)",
+          "info": "hsl(210, 80%, 60%)"
+        }
+      },
+      "theme_strategy": "Soft Utility",
+      "rules": [
+        "Avoid pure black (#000000). Use Deep Slate for high contrast.",
+        "Backgrounds should be 'Paper White' (hsl(210, 20%, 98%)) in light mode, not pure white.",
+        "Use the Accent color (Burnt Sienna) sparingly—only for the most important action on the screen.",
+        "Status colors should be muted, not neon."
+      ]
+    },
+    "layout": {
+      "grid_system": {
+        "dashboard": "Mode B: The Control Room Grid (Dense, Data-Heavy)",
+        "marketing": "Mode A: The Tetris Grid (Not applicable here, but good for login page)",
+        "columns": "12-column grid for main layouts",
+        "gap": "gap-4 or gap-6 for dashboard; gap-8 for login/landing"
+      },
+      "spacing": {
+        "scale": "Tailwind Scale (p-4, p-6, p-8)",
+        "philosophy": "Generous internal padding in cards (p-6) to prevent 'cramped' data.",
+        "containers": "Max-width containers for readability (max-w-7xl for dashboard)."
+      },
+      "structure": {
+        "sidebar": "Fixed width (w-64), collapsible.",
+        "header": "Sticky, glassmorphism effect (bg-background/80 backdrop-blur-md).",
+        "content_area": "Scrollable, distinct from sidebar/header."
+      }
+    },
+    "components": {
+      "buttons": {
+        "style": "Sharp or slightly rounded (rounded-md).",
+        "variants": {
+          "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
+          "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "ghost": "hover:bg-accent hover:text-accent-foreground"
+        }
+      },
+      "cards": {
+        "style": "Flat, 1px border (border-border), no shadow or very subtle shadow-sm.",
+        "hover": "hover:border-primary/20 transition-colors duration-200"
+      },
+      "inputs": {
+        "style": "bg-background border-input focus:ring-2 focus:ring-accent focus:border-accent",
+        "height": "h-10 (Standard) or h-12 (Comfort)"
+      },
+      "tables": {
+        "style": "Clean rows, no vertical borders. Header text-muted-foreground uppercase text-xs.",
+        "row_hover": "hover:bg-muted/50 transition-colors"
+      }
+    },
+    "visual_enhancers": {
+      "glassmorphism": "Use for sticky headers and modals: bg-white/70 backdrop-blur-xl border-b border-white/20.",
+      "gradients": "NO gradients for backgrounds. Use solid colors or subtle noise textures.",
+      "shadows": "Minimalist. shadow-sm for cards, shadow-lg for dropdowns/modals.",
+      "borders": "Crisp 1px borders. Use 'border-border' utility."
+    },
+    "motion": {
+      "transitions": "transition-all duration-200 ease-in-out",
+      "hover_effects": "Subtle lift (-translate-y-0.5) for interactive cards.",
+      "page_load": "Fade in (opacity-0 to opacity-100) with slight slide up.",
+      "libraries": ["framer-motion"]
+    },
+    "media": {
+      "image_urls": [
+        {
+          "category": "background",
+          "description": "Abstract geometric neutral background for Login Page",
+          "url": "https://images.unsplash.com/photo-1762433813475-e6b761cc23d0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMG1pbmltYWwlMjBnZW9tZXRyaWMlMjBhcmNoaXRlY3R1cmFsJTIwYmFja2dyb3VuZCUyMG5ldXRyYWwlMjB0b25lc3xlbnwwfHx8fDE3NjUwNTczNzJ8MA&ixlib=rb-4.1.0&q=85",
+          "usage": "Login page background, full cover"
+        },
+        {
+          "category": "avatar",
+          "description": "Professional agent avatar (Male)",
+          "url": "https://images.unsplash.com/photo-1665118440493-c25389dd1166?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBkaXZlcnNlJTIwdXNlciUyMGF2YXRhcnMlMjBwb3J0cmFpdHN8ZW58MHx8fHwxNzY1MDU3MzcwfDA&ixlib=rb-4.1.0&q=85",
+          "usage": "User profile, dashboard welcome"
+        },
+        {
+          "category": "avatar",
+          "description": "Professional agent avatar (Female/Diverse)",
+          "url": "https://images.unsplash.com/photo-1619241805829-34fb64299391?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBkaXZlcnNlJTIwdXNlciUyMGF2YXRhcnMlMjBwb3J0cmFpdHN8ZW58MHx8fHwxNzY1MDU3MzcwfDA&ixlib=rb-4.1.0&q=85",
+          "usage": "Team view, contact placeholder"
+        }
+      ],
+      "icons": "Use 'lucide-react' (default). For specialized dashboard icons, use 'phosphor-icons' if needed."
+    },
+    "accessibility": {
+      "contrast": "Ensure text meets WCAG AA (4.5:1). Use 'text-foreground' on 'bg-background'.",
+      "focus_states": "Visible focus rings (ring-2 ring-accent) are MANDATORY for keyboard navigation.",
+      "aria_labels": "All icon-only buttons must have aria-label.",
+      "reduced_motion": "Respect prefers-reduced-motion media query."
+    },
+    "tech_stack": {
+      "frontend": "React (JS), Tailwind CSS, Shadcn/UI",
+      "backend": "FastAPI, MongoDB",
+      "charts": "Recharts (via Shadcn Charts)"
+    },
+    "instructions_to_main_agent": [
+      "1. SETUP: Ensure Tailwind config uses the 'Soft Utility' color palette defined above.",
+      "2. COMPONENTS: Use Shadcn components for all interactive elements. Customize them to match the 'Flat & Sharp' aesthetic.",
+      "3. LAYOUT: Implement the 'Control Room Grid' for the Dashboard. Use 'Split View' for the Call Log page.",
+      "4. LOGIN: Build a high-impact Login page using the provided abstract background image.",
+      "5. DATA: Use 'Recharts' for the Call Statistics on the dashboard.",
+      "6. TESTING: Add 'data-testid' to all interactive elements."
+    ],
+    "universal_guidelines": [
+      "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+      "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+      "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+      "Create depth through layered design elements with z-index hierarchy",
+      "Use glass-morphism effects with backdrop filters (12-24px blur)",
+      "You MUST NOT apply universal transition. Eg: 'transition: all'. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+      "You MUST NOT center align the app container, ie do not add '.App { text-align: center; }' in the css file. This disrupts the human natural reading flow of text",
+      "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+      "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+      "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+      "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+      "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+      "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+      "Prioritize using pre-existing components from src/components/ui when applicable",
+      "Create new components that match the style and conventions of existing components when needed",
+      "Examine existing components to understand the project's component patterns before creating new ones",
+      "Components MUST use named exports (export const ComponentName = ...)",
+      "Pages MUST use default exports (export default function PageName() {...})",
+      "Use 'sonner' for toasts. Sonner component are located in '/app/src/components/ui/sonner.tsx'"
+    ]
+  }
+}
